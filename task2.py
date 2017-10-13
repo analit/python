@@ -1,5 +1,7 @@
 import requests
 
+print "Start"
+
 ids = range(1, 200)
 chunks = [ids[x:x + 100] for x in range(0, len(ids), 100)]
 
@@ -10,5 +12,7 @@ for chunkIds in chunks:
     response = requests.get('https://api.vk.com/method/users.get', params={"user_ids": ids, "lang": "en"})
     listSerg = [user for user in response.json()["response"] if user['first_name'] == "Sergey"]
     counter += len(listSerg);
+    print 'From:{} to {} -  {}'.format(chunkIds[0], chunkIds[len(chunkIds)-1], len(listSerg))
 
+print "End ---------"
 print (counter);
