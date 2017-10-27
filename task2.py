@@ -2,7 +2,7 @@ import requests
 
 print "Start"
 
-ids = range(1, 200)
+ids = range(1, 1000000)
 chunks = [ids[x:x + 100] for x in range(0, len(ids), 100)]
 
 counter = 0;
@@ -15,4 +15,5 @@ for chunkIds in chunks:
     print 'From:{} to {} -  {}'.format(chunkIds[0], chunkIds[len(chunkIds)-1], len(listSerg))
 
 print "End ---------"
-print (counter);
+
+print (counter); #22397
