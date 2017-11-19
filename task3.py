@@ -18,5 +18,4 @@ result = {month + 1: {"debt": monthPay, "percent_amount": data["amount"] * month
 print("| %+8s | %+14s | %+14s | %+14s |" % ('month', 'percent amount', 'debt', "debt rest"))
 for month, month_data in result.items():
     print("| % 8d | % 14.2f | % 14.2f | % 14.2f |" % (
-
         month, month_data['percent_amount'], month_data['debt'], month_data['debt_rest']))
